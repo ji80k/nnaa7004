@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="معرض صور احترافي فائق السرعة مخصص لأرشفة جوجل">
+    <title>معرض الصور الذكي | أرشيف Gooh</title>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "ImageGallery",
+      "name": "مجموعة صور Gooh الأصلية",
+      "description": "معرض يحتوي على 8 صور حصرية عالية الجودة تم إعدادها للأرشفة السريعة.",
+      "image": [
+        "gooh1.jpg", "gooh2.jpg", "gooh3.jpg", "gooh4.jpg",
+        "gooh5.jpg", "gooh6.jpg", "gooh7.jpg", "gooh8.jpg"
+      ]
+    }
+    </script>
+
+    <style>
+        :root { --bg: #fdfdfd; --text: #333; --accent: #2563eb; }
+        body { font-family: system-ui, -apple-system, sans-serif; background: var(--bg); color: var(--text); margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; text-align: center; }
+        h1 { font-size: 2rem; margin-bottom: 30px; color: var(--accent); }
+        
+        /* شبكة الصور السريعة */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 15px;
+        }
+        .img-box {
+            background: #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            aspect-ratio: 1 / 1; /* صور مربعة ومنظمة */
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            /* خاصية تحسين الأداء */
+            content-visibility: auto; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>مستودع الصور الرقمي</h1>
+        
+        <div class="gallery">
+            <div class="img-box"><img src="gooh1.jpg" alt="صورة حصرية gooh1 بجودة عالية" loading="lazy"></div>
+            <div class="img-box"><img src="gooh2.jpg" alt="خلفية مميزة gooh2 للتصفح" loading="lazy"></div>
+            <div class="img-box"><img src="gooh3.jpg" alt="تصميم رقمي gooh3 فريد" loading="lazy"></div>
+            <div class="img-box"><img src="gooh4.jpg" alt="لقطة فنية gooh4 للتحميل" loading="lazy"></div>
+            <div class="img-box"><img src="gooh5.jpg" alt="صورة gooh5 أصلية وحصرية" loading="lazy"></div>
+            <div class="img-box"><img src="gooh6.jpg" alt="عنصر بصري gooh6 احترافي" loading="lazy"></div>
+            <div class="img-box"><img src="gooh7.jpg" alt="صورة gooh7 للويب" loading="lazy"></div>
+            <div class="img-box"><img src="gooh8.jpg" alt="خاتمة مجموعة gooh8" loading="lazy"></div>
+        </div>
+    </div>
+
+    <footer style="margin-top: 50px; font-size: 0.8rem; color: #999; text-align: center;">
+        بوابة أرشفة الصور المتطورة &copy; 2026
+    </footer>
+
+</body>
+</html>
