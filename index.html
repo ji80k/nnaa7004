@@ -3,56 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Full View Gallery</title>
+    <title>Gallery View</title>
     <style>
-        /* تصفير الإعدادات لضمان عدم وجود هوامش */
-        body, html {
+        body {
             margin: 0;
             padding: 0;
-            background-color: #000; /* خلفية سوداء لتركيز العين على الصور */
-            overflow-x: hidden;
+            background-color: #000;
         }
 
-        .full-page-gallery {
+        .gallery {
             display: flex;
-            flex-direction: column; /* ترتيب عمودي */
+            flex-direction: column;
             align-items: center;
-            width: 100%;
         }
 
-        .img-wrapper {
+        .img-container {
             width: 100%;
-            max-width: 100%; /* عرض كامل الشاشة */
-            margin-bottom: 0; /* لا توجد فواصل بين الصور */
+            max-width: 900px; /* عرض مثالي للأرشفة والتصفح */
+            margin-bottom: 5px; /* فراغ بسيط جداً (5 بكسل) لفصل الصور تقنياً */
         }
 
         img {
             width: 100%;
-            height: auto; /* الحفاظ على أبعاد الصورة الأصلية كاملة */
+            height: auto;
             display: block;
-            loading: lazy; /* تسريع التحميل أثناء التمرير */
-        }
-
-        /* تحسين العرض على الشاشات الكبيرة */
-        @media (min-width: 1024px) {
-            img {
-                max-width: 800px; /* تحديد عرض مريح للعين على الكمبيوتر */
-                margin: 0 auto;
-            }
+            border: none;
         }
     </style>
 </head>
 <body>
 
-    <div class="full-page-gallery">
-        <img src="gooh1.jpg" alt="gooh 1 full view">
-        <img src="gooh2.jpg" alt="gooh 2 full view">
-        <img src="gooh3.jpg" alt="gooh 3 full view">
-        <img src="gooh4.jpg" alt="gooh 4 full view">
-        <img src="gooh5.jpg" alt="gooh 5 full view">
-        <img src="gooh6.jpg" alt="gooh 6 full view">
-        <img src="gooh7.jpg" alt="gooh 7 full view">
-        <img src="gooh8.jpg" alt="gooh 8 full view">
+    <div class="gallery">
+        <div class="img-container"><img src="gooh1.jpg" alt="gooh image 1"></div>
+        <div class="img-container"><img src="gooh2.jpg" alt="gooh image 2"></div>
+        <div class="img-container"><img src="gooh3.jpg" alt="gooh image 3"></div>
+        <div class="img-container"><img src="gooh4.jpg" alt="gooh image 4"></div>
+        <div class="img-container"><img src="gooh5.jpg" alt="gooh image 5"></div>
+        <div class="img-container"><img src="gooh6.jpg" alt="gooh image 6"></div>
+        <div class="img-container"><img src="gooh7.jpg" alt="gooh image 7"></div>
+        <div class="img-container"><img src="gooh8.jpg" alt="gooh image 8"></div>
     </div>
 
 </body>
