@@ -3,61 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Full View Gallery</title>
     <style>
-        /* إعدادات التصفح السريع */
-        body {
+        /* تصفير الإعدادات لضمان عدم وجود هوامش */
+        body, html {
             margin: 0;
-            padding: 10px;
-            background-color: #ffffff; /* خلفية بيضاء نقية */
+            padding: 0;
+            background-color: #000; /* خلفية سوداء لتركيز العين على الصور */
+            overflow-x: hidden;
+        }
+
+        .full-page-gallery {
             display: flex;
-            justify-content: center;
-        }
-
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 10px;
+            flex-direction: column; /* ترتيب عمودي */
+            align-items: center;
             width: 100%;
-            max-width: 1400px;
         }
 
-        .img-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 4px; /* زوايا خفيفة جداً */
-            background-color: #f0f0f0;
+        .img-wrapper {
+            width: 100%;
+            max-width: 100%; /* عرض كامل الشاشة */
+            margin-bottom: 0; /* لا توجد فواصل بين الصور */
         }
 
         img {
             width: 100%;
-            height: 100%;
-            object-fit: cover;
+            height: auto; /* الحفاظ على أبعاد الصورة الأصلية كاملة */
             display: block;
-            aspect-ratio: 1 / 1; /* صور مربعة متناسقة */
-            transition: opacity 0.3s;
+            loading: lazy; /* تسريع التحميل أثناء التمرير */
         }
 
-        /* لضمان سرعة التحميل وتجاوب الموبايل */
-        @media (max-width: 480px) {
-            .gallery {
-                grid-template-columns: repeat(2, 1fr); /* صورتين في الصف للجوال */
-                gap: 5px;
+        /* تحسين العرض على الشاشات الكبيرة */
+        @media (min-width: 1024px) {
+            img {
+                max-width: 800px; /* تحديد عرض مريح للعين على الكمبيوتر */
+                margin: 0 auto;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="gallery">
-        <div class="img-item"><img src="gooh1.jpg" alt="gooh1" loading="lazy"></div>
-        <div class="img-item"><img src="gooh2.jpg" alt="gooh2" loading="lazy"></div>
-        <div class="img-item"><img src="gooh3.jpg" alt="gooh3" loading="lazy"></div>
-        <div class="img-item"><img src="gooh4.jpg" alt="gooh4" loading="lazy"></div>
-        <div class="img-item"><img src="gooh5.jpg" alt="gooh5" loading="lazy"></div>
-        <div class="img-item"><img src="gooh6.jpg" alt="gooh6" loading="lazy"></div>
-        <div class="img-item"><img src="gooh7.jpg" alt="gooh7" loading="lazy"></div>
-        <div class="img-item"><img src="gooh8.jpg" alt="gooh8" loading="lazy"></div>
+    <div class="full-page-gallery">
+        <img src="gooh1.jpg" alt="gooh 1 full view">
+        <img src="gooh2.jpg" alt="gooh 2 full view">
+        <img src="gooh3.jpg" alt="gooh 3 full view">
+        <img src="gooh4.jpg" alt="gooh 4 full view">
+        <img src="gooh5.jpg" alt="gooh 5 full view">
+        <img src="gooh6.jpg" alt="gooh 6 full view">
+        <img src="gooh7.jpg" alt="gooh 7 full view">
+        <img src="gooh8.jpg" alt="gooh 8 full view">
     </div>
 
 </body>
